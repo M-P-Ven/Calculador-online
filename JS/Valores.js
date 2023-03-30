@@ -12,12 +12,22 @@ var botao7 = document.querySelector("#botao7");
 var botao8 = document.querySelector("#botao8");
 var botao9 = document.querySelector("#botao9");
 var botao0 = document.querySelector("#botao0");
-//var botaoponto = document.querySelector("#botao");
+var botaoponto = document.querySelector("#botaoponto");
 var botaoMenos = document.querySelector("#botaomenos");
 var botaoMais = document.querySelector("#botaomais");
 var botaoDiv = document.querySelector("#botaodiv");
 var botaoMul = document.querySelector("#botaomul");
+var botaoClr = document.querySelector("#botaoClr");
 
+botaoClr.addEventListener("click",function(event){
+    ValorEsquerda = null;
+    console.log(ValorEsquerda);
+    Sinal = null;
+    console.log(Sinal);
+    ValorDireita = null;
+    console.log(ValorDireita);  
+    var mostrando = document.getElementById("ValoresDaConta").innerHTML = "0";
+});
 
 botao1.addEventListener("click",function(event){
     if(Sinal == null && ValorEsquerda == null){
@@ -45,6 +55,7 @@ botao1.addEventListener("click",function(event){
         }
     }
 });
+
 botao2.addEventListener("click",function(event){
     if(Sinal == null && ValorEsquerda == null){
         ValorEsquerda = 2;
@@ -69,7 +80,9 @@ botao2.addEventListener("click",function(event){
                 demonstrarValorFinal(ValorEsquerda, Sinal, ValorDireita);
             }
         }
-    }});
+    }
+});
+
 botao3.addEventListener("click",function(event){
     if(Sinal == null && ValorEsquerda == null){
         ValorEsquerda = 3;
@@ -94,7 +107,9 @@ botao3.addEventListener("click",function(event){
                 demonstrarValorFinal(ValorEsquerda, Sinal, ValorDireita);
             }
         }
-    }});
+    }
+});
+
 botao4.addEventListener("click",function(event){
     if(Sinal == null && ValorEsquerda == null){
         ValorEsquerda = 4;
@@ -119,7 +134,9 @@ botao4.addEventListener("click",function(event){
                 demonstrarValorFinal(ValorEsquerda, Sinal, ValorDireita);
             }
         }
-    }});
+    }
+});
+
 botao5.addEventListener("click",function(event){
     if(Sinal == null && ValorEsquerda == null){
         ValorEsquerda = 5;
@@ -144,7 +161,9 @@ botao5.addEventListener("click",function(event){
                 demonstrarValorFinal(ValorEsquerda, Sinal, ValorDireita);
             }
         }
-    }});
+    }
+});
+
 botao6.addEventListener("click",function(event){
     if(Sinal == null && ValorEsquerda == null){
         ValorEsquerda = 6;
@@ -169,7 +188,9 @@ botao6.addEventListener("click",function(event){
                 demonstrarValorFinal(ValorEsquerda, Sinal, ValorDireita);
             }
         }
-    }});
+    }
+});
+
 botao7.addEventListener("click",function(event){
     if(Sinal == null && ValorEsquerda == null){
         ValorEsquerda = 7;
@@ -195,6 +216,7 @@ botao7.addEventListener("click",function(event){
             }
         }
     }});
+
 botao8.addEventListener("click",function(event){
     if(Sinal == null && ValorEsquerda == null){
         ValorEsquerda = 8;
@@ -220,6 +242,7 @@ botao8.addEventListener("click",function(event){
             }
         }
     }});
+
 botao9.addEventListener("click",function(event){
     if(Sinal == null && ValorEsquerda == null){
         ValorEsquerda = 9;
@@ -245,6 +268,7 @@ botao9.addEventListener("click",function(event){
             }
         }
     }});
+
 botao0.addEventListener("click",function(event){
     if(Sinal == null && ValorEsquerda == null){
         ValorEsquerda = 0;
@@ -270,42 +294,48 @@ botao0.addEventListener("click",function(event){
             }
         }
     }});
-    /*botaoponto.addEventListener("click",function(event){
-        if(Sinal == null && ValorEsquerda == null){
-            ValorEsquerda = 0.;
+
+botaoponto.addEventListener("click",function(event){
+    if(Sinal == null && ValorEsquerda == null){
+        ValorEsquerda = ValorEsquerda;
+        console.log(ValorEsquerda);
+    }
+    else{
+        if(Sinal == null && ValorEsquerda != null){
+            ValorEsquerda = ValorEsquerda+0.0;
             console.log(ValorEsquerda);
         }
         else{
-            if(Sinal == null && ValorEsquerda != null){
-                ValorEsquerda = ValorEsquerda+0.;
-                console.log(ValorEsquerda);
+            if(ValorDireita == null){
+                ValorDireita = ValorDireita; 
+                console.log(ValorDireita);
             }
             else{
-                if(ValorDireita == null){
-                    ValorDireita = 0.; 
-                    console.log(ValorDireita);
-                }
-                else{
-                    ValorDireita = ValorDireita+0.;
-                    console.log(ValorDireita);
-                }
+                ValorDireita = ValorDireita+0.0;
+                console.log(ValorDireita);
             }
-        }});*/
+        }
+    }
+});
+
 botaoMenos.addEventListener("click",function(event){
     Sinal = "-"; 
     console.log(Sinal);
     demonstrarValorFinal(ValorEsquerda, Sinal, ValorDireita);
 });
+
 botaoMais.addEventListener("click",function(event){
     Sinal = "+"; 
     console.log(Sinal);
     demonstrarValorFinal(ValorEsquerda, Sinal, ValorDireita);
 });
+
 botaoDiv.addEventListener("click",function(event){
     Sinal = "/"; 
     console.log(Sinal);
     demonstrarValorFinal(ValorEsquerda, Sinal, ValorDireita);
 });
+
 botaoMul.addEventListener("click",function(event){
     Sinal = "*"; 
     console.log(Sinal);
@@ -315,17 +345,22 @@ botaoMul.addEventListener("click",function(event){
 function PegarValorE(){
     return ValorEsquerda;
 };
+
 function Pegarsinal(){
     return Sinal;
 };
+
 function PegarValorD(){
     return ValorDireita;
 };
 
-function zerando(){
-ValorEsquerda = null;
+function zerando(Result){
+ValorEsquerda = Result;
+console.log(ValorEsquerda);
 Sinal = null;
+console.log(Sinal);
 ValorDireita = null;
+console.log(ValorDireita);
 }
 
 

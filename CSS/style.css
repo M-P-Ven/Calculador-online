@@ -1,72 +1,64 @@
-body{
-	height: auto;
-	width: auto;
+*{
+    margin: 0;
+    padding: 0;
 }
+
+/*cabeçallho*/
 
 header{
+	height: 4vh;
 	text-align: center;
 	background-color: #333;
-	height: 4em;
-	color: #FFF;
-}
-main{
-	background: gray;
-	margin-bottom: -0,5em;
-}
-
-footer{
-	text-align: center;
-	background-color: #333;
-	height: 4em;
-	color: #FFF;
-}
-
-.link{
-	font-size: 2em;
-	display:inline-block;
-	vertical-align:	middle;
 	color: #FFF;
 }
 
 header h2{
-	font-size: 2em;
-	display:inline-block;
-	vertical-align:	middle;
+	font-size: 24px;
+	text-decoration: none;
+	color: #FFF;
 }
 
-header .container{
-	content: '';
-	display:inline-block;
-	height: 100%;
-	vertical-align:	middle;
+/*botoes e parte principal*/
+
+main{
+	height: 87vh;
+	padding: 20px 0px;
+	align-items: center;
+	background: gray;
+	display: flex;
+	flex-direction: column;
 }
 
-div button{
-    display:inline-block;
+.linhaDeBotoes{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 10px;
 }
 
-.container{
-	width: 60%;
-	height: 100%;
-	margin: 0 auto;
+.mostrando{
+	width: 13%;
+	background-color: #3f3f3fd7;
+	color: #FFF;
+	border: 5px solid #04324c;
 }
+
+/*botoes*/
 
 button{
-	padding: .5em 2em;
-	border: 0;
-	border-bottom: 3px solid;
-	font-size: 1.2em;
 	cursor: pointer;
-	margin: 0;
-	margin-top: -3px;
 	color: #fff;
 	background-color:#0c8cd3;
-	border-color: #04324c;
-	width: 20%;
+	border: 3px solid #04324c;
     display: block;
     clear: both;
-    margin: 10px 0px;
+	padding: 10px 30px;
+    margin: 5px 0px;
+	
+}
 
+button:hover{
+	background-color: #04324c;
 }
 
 button:active{
@@ -75,11 +67,26 @@ button:active{
 	border: 0;
 }
 
-.fadeout{
-	opacity: 0;
-	transition: 0.5s;
+/*footer part*/
+
+footer{
+	height: 5vh;
+	text-align: center;
+	background-color: #333;
+	color: #FFF;
+	}
+
+.link{
+	font-size: 24px;
+	text-decoration: none;
+	color: #FFF;
 }
 
+/*esconder erros*/
+
+.fadeout{
+	opacity: 0;
+}
 
 .sumiu{
 	display: none;

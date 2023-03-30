@@ -28,28 +28,28 @@ function calculando(){
             Result = ValorL+ValorR;
             console.log(Result);
             ValorCalulado(Result);
-            zerando();
+            zerando(Result);
             break;
         
         case '-':
             Result = ValorL-ValorR;
             console.log(Result);
             ValorCalulado(Result);
-            zerando();
+            zerando(Result);
             break;
         
         case '*':
             Result = ValorL*ValorR;
             console.log(Result);
             ValorCalulado(Result);
-            zerando();
+            zerando(Result);
             break;
         
         case '/':
             Result = ValorL/ValorR;
             console.log(Result);
             ValorCalulado(Result);
-            zerando();
+            zerando(Result);
             break;
     }
 }
